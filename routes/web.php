@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleSocialiteController;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +16,14 @@ use App\Http\Controllers\GoogleSocialiteController;
 
 Route::get('/', [GoogleSocialiteController::class, 'redirectToGoogle']);
 Route::get('callback/google/code=12207', [GoogleSocialiteController::class, 'handleCallback']);
+
+
+Route::get('home', [GoogleSocialiteController::class, 'index']);
+Route::post('todolist',[GoogleSocialiteController::class, 'todolist']);
+Route::post('todos',[GoogleSocialiteController::class, 'todos']);
+Route::post('comment',[GoogleSocialiteController::class, 'comment']);
+
+
+
+
+
